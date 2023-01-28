@@ -7,6 +7,7 @@ import TabsComponent from "../components/Dashboard/Tabs";
 
 import PaginationComponent from "../components/Dashboard/Pagination";
 import TopButton from "../components/Common/TopButton";
+import Footer from "../components/Common/Footer/footer";
 
 function Dashboard() {
   const [coins, setCoins] = useState([]);
@@ -66,11 +67,11 @@ function Dashboard() {
 
   return (
     <>
+      <Header />
       {loading ? (
         <Loader />
       ) : (
         <>
-          <Header />
           <Search search={search} handleChange={handleChange} />
           <TabsComponent
             coins={search ? filteredCoins : paginatedCoins}
@@ -85,6 +86,7 @@ function Dashboard() {
         </>
       )}
       <TopButton />
+      <Footer />
     </>
   );
 }
