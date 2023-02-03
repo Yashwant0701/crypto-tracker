@@ -3,6 +3,8 @@ import Button from "../../Common/Button";
 import "./styles.css";
 import gradient from "../../../assets/gradient.png";
 import iphone from "../../../assets/iphone.png";
+import { RWebShare } from "react-web-share";
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
 function MainComponent() {
@@ -40,8 +42,19 @@ function MainComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.25, duration: 0.75 }}
         >
-          <Button text={"Dashboard"} />
-          <Button text={"Share App"} outlined={true} />
+          <a href="/dashboard">
+            <Button text={"Dashboard"} />
+          </a>
+          <RWebShare
+            data={{
+              text: "CryptoDashboard made by Yashwant using React JS.",
+              url: "https://crypto-tracker-app-website.netlify.app/",
+              title: "CryptoTracker.",
+            }}
+            onClick={() => toast.info("App Shared!")}
+          >
+            <Button text={"Share App"} outlined={true} />
+          </RWebShare>
         </motion.div>
       </div>
       <div className="gradient-div">
