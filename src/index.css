@@ -33,7 +33,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--black);
+  background-color:var(--black);
 
   overflow-x: hidden;
 }
@@ -50,7 +50,7 @@ span {
 }
 
 ::selection {
-  background-color: var(--blue);
+  background-color: var(--white);
   color: var(--white);
 }
 
@@ -63,7 +63,7 @@ span {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: var(--green);
   border-radius: 10px;
 }
 
@@ -83,9 +83,9 @@ a {
   position: fixed;
   transform: translateX(-50%) translateY(-50%);
   pointer-events: none;
-  background-color: var(--blue);
+  background-color:#FF8C00;
   z-index: 10000;
-  border: 2px solid var(--blue);
+  border: 2px solid #FF8C00;
   height: 0.3rem;
   width: 0.3rem;
   border-radius: 50%;
@@ -99,7 +99,7 @@ a {
   background-color: transparent;
   border-radius: 50%;
   z-index: 10000;
-  border: 2px solid var(--blue);
+  border: 2px solid #FF8C00;
   height: 2rem;
   width: 2rem;
   transition: all 400ms ease-out;
